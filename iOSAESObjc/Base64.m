@@ -1,5 +1,5 @@
 //
-// Copied from Internet
+// Copied from a Snippet on Internet to avoid any build dependency.
 //
 
 #import "Base64.h"

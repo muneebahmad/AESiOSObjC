@@ -1,5 +1,5 @@
 //
-// Copied from internet.
+// Copied from a Snippet on internet. to avoid any build dependency.
 //
 
 #import <Foundation/Foundation.h>

@@ -6,19 +6,27 @@
 //  Copyright (c) 2016 Muneeb Ahmad. All rights reserved.
 //
 
+//
+// The Base64 class is used from a snippet on Internet instead of adding it as a dependency.
+// So this project can be built easily without dependency management or framework integration.
+//
+
+// TOOLS: XCode 6.3
+// Exception handling is not done, you can deal with it yourself if you face any.
+
 #import "AES2.h"
 #import <CommonCrypto/CommonCryptor.h>
 
 @implementation NSData (AES2)
 
-//Call this to Enrypt with ECB Cipher Transformation mode.
-- (NSData *) encryptECB:(NSString *)key iv:(NSString *)iv {
-    return [self aes128Operation:kCCEncrypt key:key iv:iv ecb:true];
+//Call this to Enrypt with ECB Cipher Transformation mode. Iv is not required for ECB
+- (NSData *) encryptECB:(NSString *)key {
+    return [self aes128Operation:kCCEncrypt key:key iv:nil ecb:true];
 }
 
-//Call this to Decrypt with ECB Cipher Transformation mode.
-- (NSData *) decryptECB:(NSString *)key iv:(NSString *)iv {
-    return [self aes128Operation:kCCDecrypt key:key iv:iv ecb:true];
+//Call this to Decrypt with ECB Cipher Transformation mode. Iv is not required for ECB
+- (NSData *) decryptECB:(NSString *)key {
+    return [self aes128Operation:kCCDecrypt key:key iv:nil ecb:true];
 }
 
 //Call this to Encrypt with CBC Cipher Transformation mdoe.
@@ -31,7 +39,7 @@
     return [self aes128Operation:kCCDecrypt key:key iv:iv ecb:false];
 }
 
-//Used internally.
+//Used internally. Encrypts or Decrypts based on CCOperation
 - (NSData *) aes128Operation:(CCOperation)operation key:(NSString *)key iv:(NSString *)iv ecb:(BOOL) ecb {
     char keyPtr[kCCKeySizeAES128 + 1];
     bzero(keyPtr, sizeof(keyPtr));
