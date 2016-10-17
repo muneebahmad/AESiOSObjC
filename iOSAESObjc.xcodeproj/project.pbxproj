@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C286184D1DB55DDC00C27A7F /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C286184C1DB55DDC00C27A7F /* Base64.m */; };
 		C2D03A401DB52FA9009E4ADC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D03A3F1DB52FA9009E4ADC /* main.m */; };
 		C2D03A431DB52FA9009E4ADC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D03A421DB52FA9009E4ADC /* AppDelegate.m */; };
 		C2D03A461DB52FA9009E4ADC /* iOSAESObjc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2D03A441DB52FA9009E4ADC /* iOSAESObjc.xcdatamodeld */; };
@@ -15,6 +16,8 @@
 		C2D03A4E1DB52FA9009E4ADC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2D03A4D1DB52FA9009E4ADC /* Images.xcassets */; };
 		C2D03A511DB52FA9009E4ADC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D03A4F1DB52FA9009E4ADC /* LaunchScreen.xib */; };
 		C2D03A5D1DB52FAA009E4ADC /* iOSAESObjcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D03A5C1DB52FAA009E4ADC /* iOSAESObjcTests.m */; };
+		C2D03A681DB534B9009E4ADC /* AES2.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D03A671DB534B9009E4ADC /* AES2.m */; };
+		C2D03A6A1DB539F3009E4ADC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D03A691DB539F3009E4ADC /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C286184B1DB55DDC00C27A7F /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		C286184C1DB55DDC00C27A7F /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
 		C2D03A3A1DB52FA9009E4ADC /* iOSAESObjc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAESObjc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D03A3E1DB52FA9009E4ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D03A3F1DB52FA9009E4ADC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +47,9 @@
 		C2D03A561DB52FAA009E4ADC /* iOSAESObjcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSAESObjcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D03A5B1DB52FAA009E4ADC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2D03A5C1DB52FAA009E4ADC /* iOSAESObjcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSAESObjcTests.m; sourceTree = "<group>"; };
+		C2D03A661DB534B9009E4ADC /* AES2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AES2.h; sourceTree = "<group>"; };
+		C2D03A671DB534B9009E4ADC /* AES2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AES2.m; sourceTree = "<group>"; };
+		C2D03A691DB539F3009E4ADC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D03A6A1DB539F3009E4ADC /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +74,7 @@
 		C2D03A311DB52FA9009E4ADC = {
 			isa = PBXGroup;
 			children = (
+				C2D03A691DB539F3009E4ADC /* Security.framework */,
 				C2D03A3C1DB52FA9009E4ADC /* iOSAESObjc */,
 				C2D03A591DB52FAA009E4ADC /* iOSAESObjcTests */,
 				C2D03A3B1DB52FA9009E4ADC /* Products */,
@@ -92,6 +102,10 @@
 				C2D03A4F1DB52FA9009E4ADC /* LaunchScreen.xib */,
 				C2D03A441DB52FA9009E4ADC /* iOSAESObjc.xcdatamodeld */,
 				C2D03A3D1DB52FA9009E4ADC /* Supporting Files */,
+				C2D03A661DB534B9009E4ADC /* AES2.h */,
+				C2D03A671DB534B9009E4ADC /* AES2.m */,
+				C286184B1DB55DDC00C27A7F /* Base64.h */,
+				C286184C1DB55DDC00C27A7F /* Base64.m */,
 			);
 			path = iOSAESObjc;
 			sourceTree = "<group>";
@@ -222,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C286184D1DB55DDC00C27A7F /* Base64.m in Sources */,
+				C2D03A681DB534B9009E4ADC /* AES2.m in Sources */,
 				C2D03A431DB52FA9009E4ADC /* AppDelegate.m in Sources */,
 				C2D03A401DB52FA9009E4ADC /* main.m in Sources */,
 				C2D03A491DB52FA9009E4ADC /* ViewController.m in Sources */,
@@ -420,6 +436,7 @@
 				C2D03A621DB52FAA009E4ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2D03A631DB52FAA009E4ADC /* Build configuration list for PBXNativeTarget "iOSAESObjcTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +445,7 @@
 				C2D03A651DB52FAA009E4ADC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

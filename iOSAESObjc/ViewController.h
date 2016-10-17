@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextView *etEncrypted;
+@property (weak, nonatomic) IBOutlet UITextField *etKey;
+
+- (IBAction)encryptClicked:(id)sender;
+
+- (IBAction)decryptClicked:(id)sender;
+
 
 @end
 
